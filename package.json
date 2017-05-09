@@ -1,9 +1,10 @@
 {
-  "name": "srt.ly",
+  "name": "gvo9",
   "version": "1.0.0",
-  "description": "",
+  "description": "simple linkshorter",
   "main": "app.js",
   "scripts": {
+      "start": "app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Christian Sprenger",
