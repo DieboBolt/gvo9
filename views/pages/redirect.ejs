@@ -1,0 +1,31 @@
+<% include ../partials/header.ejs %>
+
+
+
+          <div class="inner cover">
+            <h1 class="cover-heading">Du wirst weitergeleitet!</h1>
+              <br />
+              <p class="lead"><%= url.url %></p>
+                
+              
+            
+          </div>
+
+<script>
+    var url = <%- JSON.stringify(url.url) %>;
+    if(url.startsWith("www.")){
+        url = "http://" + url;
+        document.location.href = url;
+    }else if(!url.startsWith("http://") && url.startsWith("https://")){
+        document.location.href = url;
+    }else if(!url.startsWith("https://") && url.startsWith("http://")){
+        document.location.href = url;
+    }else{
+        url = "http://" + url;
+        document.location.href = url;
+    }
+    
+</script>
+
+
+<% include ../partials/footer.ejs %>
